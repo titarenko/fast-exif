@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "bluebird": "^3.3.3",
-    "exif-reader": "^1.0.0"
+    "exif-reader": "^1.2.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.12",
+    "coveralls": "^3.1.1",
     "istanbul": "^0.4.4",
-    "mocha": "^2.4.5",
-    "should": "^8.2.2"
+    "mocha": "^10.2.0",
+    "should": "^13.2.3"
   },
   "scripts": {
     "test": "istanbul cover _mocha -- tests --recursive -R spec",
