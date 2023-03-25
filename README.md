@@ -13,12 +13,17 @@ npm i fast-exif --save
 ## Usage
 
 ```js
-var exif = require('fast-exif');
-exif.read('my.jpg').then(console.log).catch(console.error);
+const exif = require("fast-exif").default;
+exif.read("my.jpg").then(console.log).catch(console.error);
+```
+
+```ts
+import { read } from "fast-exif";
+read("my.jpg").then(console.log).catch(console.error);
 ```
 
 ```
-{ image: 
+{ image:
    { Make: 'Canon',
      Model: 'Canon EOS 30D',
      Orientation: 1,
@@ -28,7 +33,7 @@ exif.read('my.jpg').then(console.log).catch(console.error);
      Software: 'Aperture 3.4.3',
      ModifyDate: Tue Dec 25 2012 04:25:39 GMT+0200 (EET),
      ExifOffset: 194 },
-  exif: 
+  exif:
    { ExposureTime: 0.0015625,
      FNumber: 10,
      ExposureProgram: 3,
@@ -65,13 +70,13 @@ Because [most popular npm module for exif](https://www.npmjs.com/package/exif) [
 
 If `fast-exif` returned `null` instead of object with EXIF info, then
 
-* either file does not have any EXIF info
-* or EXIF marker is located outside of first 512 bytes
+- either file does not have any EXIF info
+- or EXIF marker is located outside of first 512 bytes
 
 In such case
 
-* specify number of 512-byte blocks to examine while searching for EXIF (`exif.read('my.jpeg', 20)`)
-* or specify `true` for unlimited (to the end of file) search (`exif.read('my.jpeg', true)`)
+- specify number of 512-byte blocks to examine while searching for EXIF (`exif.read('my.jpeg', 20)`)
+- or specify `true` for unlimited (to the end of file) search (`exif.read('my.jpeg', true)`)
 
 ## License
 

@@ -1,21 +1,27 @@
 {
   "name": "fast-exif",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Fast EXIF extraction without reading whole file into memory.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
-    "bluebird": "^3.3.3",
-    "exif-reader": "^1.2.0"
+    "exif-reader": "1.2.0"
   },
   "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/exif-reader": "^1.0.0",
+    "@types/node": "^18.15.9",
     "coveralls": "^3.1.1",
-    "istanbul": "^0.4.4",
-    "mocha": "^10.2.0",
-    "should": "^13.2.3"
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.2"
   },
   "scripts": {
-    "test": "istanbul cover _mocha -- tests --recursive -R spec",
-    "release": "npm t && npm version patch && npm publish && git push"
+    "test": "jest --coverage",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "prepublish": "npm t && tsc",
+    "release-major": "npm version major && npm publish && git push",
+    "release-minor": "npm version minor && npm publish && git push",
+    "release-patch": "npm version patch && npm publish && git push"
   },
   "repository": {
     "type": "git",

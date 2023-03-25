@@ -1,0 +1,7 @@
+__tests__
+.vscode
+coverage
+src
+.travis.yml
+jest.config.js
+tsconfig.json
