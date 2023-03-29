@@ -18,10 +18,9 @@
   "scripts": {
     "test": "jest --coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "prepublish": "npm t && tsc",
-    "release-major": "npm version major && npm publish && git push",
-    "release-minor": "npm version minor && npm publish && git push",
-    "release-patch": "npm version patch && npm publish && git push"
+    "release-major": "npm t && tsc && npm version major && npm publish && git push",
+    "release-minor": "npm t && tsc && npm version minor && npm publish && git push",
+    "release-patch": "npm t && tsc && npm version patch && npm publish && git push"
   },
   "repository": {
     "type": "git",

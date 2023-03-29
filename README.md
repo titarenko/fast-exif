@@ -13,13 +13,8 @@ npm i fast-exif --save
 ## Usage
 
 ```js
-const exif = require("fast-exif").default;
+const exif = require("fast-exif");
 exif.read("my.jpg").then(console.log).catch(console.error);
-```
-
-```ts
-import { read } from "fast-exif";
-read("my.jpg").then(console.log).catch(console.error);
 ```
 
 ```
