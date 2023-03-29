@@ -1,6 +1,6 @@
 {
   "name": "fast-exif",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Fast EXIF extraction without reading whole file into memory.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
